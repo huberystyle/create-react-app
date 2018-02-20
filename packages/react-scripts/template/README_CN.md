@@ -1,29 +1,29 @@
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+用 [Create React App](https://github.com/facebookincubator/create-react-app)创建项目
 
-Below you will find some information on how to perform common tasks.<br>
-You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
+你将找到一些关于如何执行通用任务在下面的信息中。<br>
+你可以在这里找到本指南的最新版本[here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
 
-## Table of Contents
+## 目录
 
-- [Updating to New Releases](#updating-to-new-releases)
-- [Sending Feedback](#sending-feedback)
-- [Folder Structure](#folder-structure)
-- [Available Scripts](#available-scripts)
+- [更新到最新版本](#updating-to-new-releases)
+- [发送反馈](#sending-feedback)
+- [文件夹结构](#folder-structure)
+- [有用的脚本](#available-scripts)
   - [npm start](#npm-start)
   - [npm test](#npm-test)
   - [npm run build](#npm-run-build)
   - [npm run eject](#npm-run-eject)
-- [Supported Browsers](#supported-browsers)
-- [Supported Language Features and Polyfills](#supported-language-features-and-polyfills)
-- [Syntax Highlighting in the Editor](#syntax-highlighting-in-the-editor)
-- [Displaying Lint Output in the Editor](#displaying-lint-output-in-the-editor)
-- [Debugging in the Editor](#debugging-in-the-editor)
-- [Formatting Code Automatically](#formatting-code-automatically)
-- [Changing the Page `<title>`](#changing-the-page-title)
-- [Installing a Dependency](#installing-a-dependency)
-- [Importing a Component](#importing-a-component)
-- [Code Splitting](#code-splitting)
-- [Adding a Stylesheet](#adding-a-stylesheet)
+- [支持的浏览器](#supported-browsers)
+- [支持的语言功能和Polyfills](#supported-language-features-and-polyfills)
+- [语法在编辑器中突出显示](#syntax-highlighting-in-the-editor)
+- [在编辑器中显示Lint输出](#displaying-lint-output-in-the-editor)
+- [在编辑器中调试](#debugging-in-the-editor)
+- [自动格式化代码](#formatting-code-automatically)
+- [更改页面 `<title>`](#changing-the-page-title)
+- [安装依赖项](#installing-a-dependency)
+- [导入组件](#importing-a-component)
+- [代码拆分](#code-splitting)
+- [添加样式表](#adding-a-stylesheet)
 - [Post-Processing CSS](#post-processing-css)
 - [Adding a CSS Preprocessor (Sass, Less etc.)](#adding-a-css-preprocessor-sass-less-etc)
 - [Adding Images, Fonts, and Files](#adding-images-fonts-and-files)
@@ -31,17 +31,17 @@ You can find the most recent version of this guide [here](https://github.com/fac
   - [Changing the HTML](#changing-the-html)
   - [Adding Assets Outside of the Module System](#adding-assets-outside-of-the-module-system)
   - [When to Use the `public` Folder](#when-to-use-the-public-folder)
-- [Using Global Variables](#using-global-variables)
+- [使用全局变量](#using-global-variables)
 - [Adding Bootstrap](#adding-bootstrap)
   - [Using a Custom Theme](#using-a-custom-theme)
 - [Adding Flow](#adding-flow)
-- [Adding a Router](#adding-a-router)
+- [增加一个路由器](#adding-a-router)
 - [Adding Custom Environment Variables](#adding-custom-environment-variables)
   - [Referencing Environment Variables in the HTML](#referencing-environment-variables-in-the-html)
   - [Adding Temporary Environment Variables In Your Shell](#adding-temporary-environment-variables-in-your-shell)
   - [Adding Development Environment Variables In `.env`](#adding-development-environment-variables-in-env)
 - [Can I Use Decorators?](#can-i-use-decorators)
-- [Fetching Data with AJAX Requests](#fetching-data-with-ajax-requests)
+- [通过ajax获取数据](#fetching-data-with-ajax-requests)
 - [Integrating with an API Backend](#integrating-with-an-api-backend)
   - [Node](#node)
   - [Ruby on Rails](#ruby-on-rails)
@@ -49,10 +49,10 @@ You can find the most recent version of this guide [here](https://github.com/fac
   - ["Invalid Host Header" Errors After Configuring Proxy](#invalid-host-header-errors-after-configuring-proxy)
   - [Configuring the Proxy Manually](#configuring-the-proxy-manually)
   - [Configuring a WebSocket Proxy](#configuring-a-websocket-proxy)
-- [Using HTTPS in Development](#using-https-in-development)
-- [Generating Dynamic `<meta>` Tags on the Server](#generating-dynamic-meta-tags-on-the-server)
-- [Pre-Rendering into Static HTML Files](#pre-rendering-into-static-html-files)
-- [Injecting Data from the Server into the Page](#injecting-data-from-the-server-into-the-page)
+- [在开发中使用https](#using-https-in-development)
+- [在服务器上生成动态`<meta>`](#generating-dynamic-meta-tags-on-the-server)
+- [预渲染静态HTML](#pre-rendering-into-static-html-files)
+- [将数据从服务器注入页面](#injecting-data-from-the-server-into-the-page)
 - [Running Tests](#running-tests)
   - [Filename Conventions](#filename-conventions)
   - [Command Line Interface](#command-line-interface)
@@ -73,7 +73,7 @@ You can find the most recent version of this guide [here](https://github.com/fac
 - [Developing Components in Isolation](#developing-components-in-isolation)
   - [Getting Started with Storybook](#getting-started-with-storybook)
   - [Getting Started with Styleguidist](#getting-started-with-styleguidist)
-- [Publishing Components to npm](#publishing-components-to-npm)
+- [将组件发布到npm](#publishing-components-to-npm)
 - [Making a Progressive Web App](#making-a-progressive-web-app)
   - [Opting Out of Caching](#opting-out-of-caching)
   - [Offline-First Considerations](#offline-first-considerations)
@@ -103,30 +103,30 @@ You can find the most recent version of this guide [here](https://github.com/fac
 - [Alternatives to Ejecting](#alternatives-to-ejecting)
 - [Something Missing?](#something-missing)
 
-## Updating to New Releases
+## 更新到最新版本
 
-Create React App is divided into two packages:
+创建Recat App被分成两个包：
 
-* `create-react-app` is a global command-line utility that you use to create new projects.
-* `react-scripts` is a development dependency in the generated projects (including this one).
+* `create-react-app` 是一个用于创建新项目的全局命令行工具。
+* `react-scripts` 是生成的项目（包括这个项目）中的开发依赖项。
 
-You almost never need to update `create-react-app` itself: it delegates all the setup to `react-scripts`.
+您几乎不需要更新create-react-app自己：它将所有设置委托给react-scripts。
 
-When you run `create-react-app`, it always creates the project with the latest version of `react-scripts` so you’ll get all the new features and improvements in newly created apps automatically.
+运行时create-react-app，它始终使用最新版本创建项目，react-scripts以便您自动获得新创建的应用程序中的所有新功能和改进。
 
-To update an existing project to a new version of `react-scripts`, [open the changelog](https://github.com/facebookincubator/create-react-app/blob/master/CHANGELOG.md), find the version you’re currently on (check `package.json` in this folder if you’re not sure), and apply the migration instructions for the newer versions.
+要将现有项目更新为新版本react-scripts，请[打开更新日志](https://github.com/facebookincubator/create-react-app/blob/master/CHANGELOG.md), 查找当前版本（package.json如果不确定，请检入此文件夹），并为新版本应用迁移说明。
 
-In most cases bumping the `react-scripts` version in `package.json` and running `npm install` in this folder should be enough, but it’s good to consult the [changelog](https://github.com/facebookincubator/create-react-app/blob/master/CHANGELOG.md) for potential breaking changes.
+在大多数情况下，将react-scripts版本冲入package.json并npm install在此文件夹中运行应该足够了，但最好查阅有关潜在重大更改的[更改日志](https://github.com/facebookincubator/create-react-app/blob/master/CHANGELOG.md) 
 
-We commit to keeping the breaking changes minimal so you can upgrade `react-scripts` painlessly.
+我们承诺保持最小的变化，以便您可以react-scripts无痛地升级。
 
-## Sending Feedback
+## 发送反馈
 
-We are always open to [your feedback](https://github.com/facebookincubator/create-react-app/issues).
+我们随时欢迎[您的反馈](https://github.com/facebookincubator/create-react-app/issues).
 
-## Folder Structure
+## 文件夹结构
 
-After creation, your project should look like this:
+创建后，你的项目应该如下所示:
 
 ```
 my-app/
@@ -145,33 +145,33 @@ my-app/
     logo.svg
 ```
 
-For the project to build, **these files must exist with exact filenames**:
+对于要构建的项目, **这些文件必须以确切的文件名存在**:
 
-* `public/index.html` is the page template;
-* `src/index.js` is the JavaScript entry point.
+* `public/index.html` 页面模版;
+* `src/index.js` JavaScript 入口。
 
-You can delete or rename the other files.
+你可以删除或重命名其他文件。
 
-You may create subdirectories inside `src`. For faster rebuilds, only files inside `src` are processed by Webpack.<br>
-You need to **put any JS and CSS files inside `src`**, otherwise Webpack won’t see them.
+你可以在 `src`里边创建子目录。 为了更快的重建, 只有`src`内部的文件才被 Webpack处理。<br>
+放到 `src` 意外以外的文件webpack都会无视的。
 
-Only files inside `public` can be used from `public/index.html`.<br>
-Read instructions below for using assets from JavaScript and HTML.
+只有 `public`里边的文件能被 `public/index.html` 使用。<br>
+阅读下面的使用JavaScript和HTML资源的说明。
 
-You can, however, create more top-level directories.<br>
-They will not be included in the production build so you can use them for things like documentation.
+您可以创建更多顶级目录。<br>
+它们不会包含在生产版本中，因此您可以将它们用于文档等内容。
 
-## Available Scripts
+## 有用的脚本
 
-In the project directory, you can run:
+在项目目录中你可以运行:
 
 ### `npm start`
 
-Runs the app in the development mode.<br>
+在开发模式下运行应用程序。<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+如果您进行编辑，该页面将重新加载。<br>
+您还将在控制台中看到任何lint错误。
 
 ### `npm test`
 
@@ -180,17 +180,17 @@ See the section about [running tests](#running-tests) for more information.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+构建应用程序以生产build文件夹。<br>
+它在生产模式下正确捆绑React并优化构建以获得最佳性能。
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+构建被缩小，文件名包含散列。<br>
+您的应用已准备好部署！
 
 See the section about [deployment](#deployment) for more information.
 
 ### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+**注意: 这是一个单向操作。一旦 `eject`, 你不能回退！**
 
 If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
@@ -198,16 +198,16 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Supported Browsers
+## 支持的浏览器
 
-By default, the generated project uses the latest version of React.
+默认情况下，生成的项目使用最新版本的React。
 
-You can refer [to the React documentation](https://reactjs.org/docs/react-dom.html#browser-support) for more information about supported browsers.
+你可以参考 [to the React documentation](https://reactjs.org/docs/react-dom.html#browser-support) 浏览器支持的更多信息.
 
-## Supported Language Features and Polyfills
+## 支持的语言功能和Polyfills
 
-This project supports a superset of the latest JavaScript standard.<br>
-In addition to [ES6](https://github.com/lukehoban/es6features) syntax features, it also supports:
+这个项目支持最新JavaScript标准<br>
+除了 [ES6](https://github.com/lukehoban/es6features) 语法特性, 它还支持:
 
 * [Exponentiation Operator](https://github.com/rwaldron/exponentiation-operator) (ES2016).
 * [Async/await](https://github.com/tc39/ecmascript-asyncawait) (ES2017).
@@ -230,11 +230,11 @@ If you use any other ES6+ features that need **runtime support** (such as `Array
 
 Also note that using some newer syntax features like `for...of` or `[...nonArrayValue]` causes Babel to emit code that depends on ES6 runtime features and might not work without a polyfill. When in doubt, use [Babel REPL](https://babeljs.io/repl/) to see what any specific syntax compiles down to.
 
-## Syntax Highlighting in the Editor
+## 语法在编辑器中突出显示
 
 To configure the syntax highlighting in your favorite text editor, head to the [relevant Babel documentation page](https://babeljs.io/docs/editors) and follow the instructions. Some of the most popular editors are covered.
 
-## Displaying Lint Output in the Editor
+## 在编辑器中显示Lint输出
 
 >Note: this feature is available with `react-scripts@0.2.0` and higher.<br>
 >It also only works with npm 3 or higher.
@@ -257,7 +257,7 @@ Note that even if you edit your `.eslintrc` file further, these changes will **o
 
 If you want to enforce a coding style for your project, consider using [Prettier](https://github.com/jlongster/prettier) instead of ESLint style rules.
 
-## Debugging in the Editor
+## 在编辑器中调试
 
 **This feature is currently only supported by [Visual Studio Code](https://code.visualstudio.com) and [WebStorm](https://www.jetbrains.com/webstorm/).**
 
@@ -302,7 +302,7 @@ Start your app by running `npm start`, then press `^D` on macOS or `F9` on Windo
 
 The same way you can debug your application in IntelliJ IDEA Ultimate, PhpStorm, PyCharm Pro, and RubyMine. 
 
-## Formatting Code Automatically
+## 自动格式化代码
 
 Prettier is an opinionated code formatter with support for JavaScript, CSS and JSON. With Prettier you can format the code you write automatically to ensure a code style within your project. See the [Prettier's GitHub page](https://github.com/prettier/prettier) for more information, and look at this [page to see it in action](https://prettier.github.io/prettier/).
 
@@ -352,17 +352,17 @@ Now, whenever you make a commit, Prettier will format the changed files automati
 
 Next you might want to integrate Prettier in your favorite editor. Read the section on [Editor Integration](https://prettier.io/docs/en/editors.html) on the Prettier GitHub page.
 
-## Changing the Page `<title>`
+## 更改页面 `<title>`
 
 You can find the source HTML file in the `public` folder of the generated project. You may edit the `<title>` tag in it to change the title from “React App” to anything else.
 
-Note that normally you wouldn’t edit files in the `public` folder very often. For example, [adding a stylesheet](#adding-a-stylesheet) is done without touching the HTML.
+Note that normally you wouldn’t edit files in the `public` folder very often. For example, [添加样式表](#adding-a-stylesheet) is done without touching the HTML.
 
 If you need to dynamically update the page title based on the content, you can use the browser [`document.title`](https://developer.mozilla.org/en-US/docs/Web/API/Document/title) API. For more complex scenarios when you want to change the title from React components, you can use [React Helmet](https://github.com/nfl/react-helmet), a third party library.
 
 If you use a custom server for your app in production and want to modify the title before it gets sent to the browser, you can follow advice in [this section](#generating-dynamic-meta-tags-on-the-server). Alternatively, you can pre-build each page as a static HTML file which then loads the JavaScript bundle, which is covered [here](#pre-rendering-into-static-html-files).
 
-## Installing a Dependency
+## 安装依赖项
 
 The generated project includes React and ReactDOM as dependencies. It also includes a set of scripts used by Create React App as a development dependency. You may install other dependencies (for example, React Router) with `npm`:
 
@@ -378,7 +378,7 @@ yarn add react-router
 
 This works for any library, not just `react-router`.
 
-## Importing a Component
+## 导入组件
 
 This project setup supports ES6 modules thanks to Babel.<br>
 While you can still use `require()` and `module.exports`, we encourage you to use [`import` and `export`](http://exploringjs.com/es6/ch_modules.html) instead.
@@ -427,7 +427,7 @@ Learn more about ES6 modules:
 * [Exploring ES6: Modules](http://exploringjs.com/es6/ch_modules.html)
 * [Understanding ES6: Modules](https://leanpub.com/understandinges6/read#leanpub-auto-encapsulating-code-with-modules)
 
-## Code Splitting
+## 代码拆分
 
 Instead of downloading the entire app before users can use it, code splitting allows you to split your code into small chunks which you can then load on demand.
 
@@ -480,7 +480,7 @@ If you are using React Router check out [this tutorial](http://serverless-stack.
 
 Also check out the [Code Splitting](https://reactjs.org/docs/code-splitting.html) section in React documentation.
 
-## Adding a Stylesheet
+## 添加样式表
 
 This project setup uses [Webpack](https://webpack.js.org/) for handling all assets. Webpack offers a custom way of “extending” the concept of `import` beyond JavaScript. To express that a JavaScript file depends on a CSS file, you need to **import the CSS from the JavaScript file**:
 
@@ -694,7 +694,7 @@ The `<script>` tag with the compiled code will be added to it automatically duri
 You can also add other assets to the `public` folder.
 
 Note that we normally encourage you to `import` assets in JavaScript files instead.
-For example, see the sections on [adding a stylesheet](#adding-a-stylesheet) and [adding images and fonts](#adding-images-fonts-and-files).
+For example, see the sections on [添加样式表](#adding-a-stylesheet) and [adding images and fonts](#adding-images-fonts-and-files).
 This mechanism provides a number of benefits:
 
 * Scripts and stylesheets get minified and bundled together to avoid extra network requests.
@@ -744,7 +744,7 @@ The `public` folder is useful as a workaround for a number of less common cases:
 
 Note that if you add a `<script>` that declares global variables, you also need to read the next section on using them.
 
-## Using Global Variables
+## 使用全局变量
 
 When you include a script in the HTML file that defines global variables and try to use one of these variables in the code, the linter will complain because it cannot see the definition of the variable.
 
@@ -1017,7 +1017,7 @@ Please refer to these two threads for reference:
 
 Create React App will add decorator support when the specification advances to a stable stage.
 
-## Fetching Data with AJAX Requests
+## 通过ajax获取数据
 
 React doesn't prescribe a specific approach to data fetching, but people commonly use either a library like [axios](https://github.com/axios/axios) or the [`fetch()` API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) provided by the browser. Conveniently, Create React App includes a polyfill for `fetch()` so you can use it without worrying about the browser support.
 
@@ -1223,7 +1223,7 @@ HTTPS=true npm start
 
 Note that the server will use a self-signed certificate, so your web browser will almost definitely display a warning upon accessing the page.
 
-## Generating Dynamic `<meta>` Tags on the Server
+## 在服务器上生成动态`<meta>`
 
 Since Create React App doesn’t support server rendering, you might be wondering how to make `<meta>` tags dynamic and reflect the current URL. To solve this, we recommend to add placeholders into the HTML, like this:
 
@@ -1239,7 +1239,7 @@ Then, on the server, regardless of the backend you use, you can read `index.html
 
 If you use a Node server, you can even share the route matching logic between the client and the server. However duplicating it also works fine in simple cases.
 
-## Pre-Rendering into Static HTML Files
+## 预渲染静态HTML
 
 If you’re hosting your `build` with a static hosting provider you can use [react-snapshot](https://www.npmjs.com/package/react-snapshot) or [react-snap](https://github.com/stereobooster/react-snap) to generate HTML pages for each route, or relative link, in your application. These pages will then seamlessly become active, or “hydrated”, when the JavaScript bundle has loaded.
 
@@ -1249,7 +1249,7 @@ The primary benefit of pre-rendering is that you get the core content of each pa
 
 You can read more about [zero-configuration pre-rendering (also called snapshotting) here](https://medium.com/superhighfives/an-almost-static-stack-6df0a2791319).
 
-## Injecting Data from the Server into the Page
+## 将数据从服务器注入页面
 
 Similarly to the previous section, you can leave some placeholders in the HTML that inject global variables, for example:
 
@@ -1771,7 +1771,7 @@ Learn more about React Styleguidist:
 * [GitHub Repo](https://github.com/styleguidist/react-styleguidist)
 * [Documentation](https://react-styleguidist.js.org/docs/getting-started.html)
 
-## Publishing Components to npm
+## 将组件发布到npm
 
 Create React App doesn't provide any built-in functionality to publish a component to npm. If you're ready to extract a component from your project so other people can use it, we recommend moving it to a separate directory outside of your project and then using a tool like [nwb](https://github.com/insin/nwb#react-components-and-libraries) to prepare it for publishing.
 
